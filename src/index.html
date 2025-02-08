@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashmit Rana | Portfolio</title>
+    <link href="./output.css" rel="stylesheet">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Add AOS library for scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Add custom Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Add Three.js for 3D animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Force hardware acceleration */
+        * {
+            -webkit-backface-visibility: hidden;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            will-change: transform;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-black via-[#1a1a1a] to-black text-white font-[Poppins]">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black/40 backdrop-blur-md border-b border-[#FFD700]/5">
+        <div class="container mx-auto px-6 py-5 flex justify-center items-center">
+            <!-- Social Links - Centered -->
+            <div class="flex items-center justify-center space-x-16">
+                <a href="https://www.instagram.com/ar._.xdddd?igsh=MTF3ZWZtN3FjdDNubw==" target="_blank" class="minimal-social-btn group">
+                    <div class="btn-content">
+                        <i class="fab fa-instagram text-xl"></i>
+                        <span class="btn-label">Instagram</span>
+                        <div class="btn-background"></div>
+                    </div>
+                </a>
+
+                <a href="" target="_blank" class="minimal-social-btn group">
+                    <div class="btn-content">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                        <span class="btn-label">LinkedIn</span>
+                        <div class="btn-background"></div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/ashmitrana24" target="_blank" class="minimal-social-btn group">
+                    <div class="btn-content">
+                        <i class="fab fa-github text-xl"></i>
+                        <span class="btn-label">GitHub</span>
+                        <div class="btn-background"></div>
+                    </div>
+                </a>
+
+                <a href="mailto:ashmit.rana2019@gmail.com?subject=Project%20Inquiry&body=Hi%20Ashmit,%0D%0A%0D%0AI%20would%20like%20to%20discuss%20a%20potential%20project%20with%20you.%0D%0A%0D%0ABest%20regards" target="_blank" class="minimal-social-btn group">
+                    <div class="btn-content">
+                        <i class="far fa-envelope text-xl"></i>
+                        <span class="btn-label">Email</span>
+                        <div class="btn-background"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center px-4 pt-20 relative parallax-section" data-speed="0.1">
+        <div id="hero-canvas" class="absolute inset-0 z-0"></div>
+        <div class="container mx-auto relative z-10" data-aos="fade-up">
+            <div class="flex flex-col text-left max-w-3xl mx-auto lg:mx-24">
+                <p class="text-[#FFD700] mb-4 tracking-wider font-light">Welcome to my digital cosmos</p>
+                <div class="space-y-6 mb-8">
+                    <h1 class="text-5xl md:text-7xl font-['Outfit'] font-[500] mb-4 golden-text tracking-tight">
+                        Ashmit Rana.
+                    </h1>
+                    <h2 class="text-4xl md:text-6xl font-bold text-gray-300 mb-6 golden-gradient">
+                        Digital Architect & Creative Explorer
+                    </h2>
+                    <p class="text-gray-400 text-lg font-light tracking-wide leading-relaxed max-w-xl">
+                        In this vast digital universe, I craft experiences that bridge the gap between imagination and reality.
+                    </p>
+                    <p class="text-gray-400 leading-relaxed">
+                        Full Stack Developer • UI/UX Designer • Game Developer<br>
+                        Creating constellations of code and design in the digital space.
+                    </p>
+                </div>
+                <div class="flex justify-start">
+                    <a href="#work" class="group relative px-8 py-4 overflow-hidden rounded-lg border-2 border-[#FFD700] text-[#FFD700] transition-all hover:text-black">
+                        <span class="relative z-10">Explore My Universe</span>
+                        <div class="absolute inset-0 bg-[#FFD700] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 relative parallax-section" data-speed="0.15">
+        <div class="container mx-auto" data-aos="fade-up">
+            <h2 class="text-3xl font-['Playfair_Display'] font-bold mb-16 flex items-center justify-center">
+                <span class="text-[#FFD700] mr-2">01.</span> 
+                <span class="relative">
+                    About Me
+                    <span class="absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-[#FFD700] to-transparent"></span>
+                </span>
+            </h2>
+            
+            <div class="flex justify-center items-center">
+                <div class="max-w-4xl perspective-card">
+                    <div class="card-content p-10 bg-gradient-to-br from-black via-[#1a1a1a] to-black border border-[#FFD700]/20 rounded-xl shadow-2xl backdrop-blur-sm">
+                        <!-- Bio Section -->
+                        <div class="mb-12 space-y-6">
+                            <p class="text-xl text-gray-300 leading-relaxed animated-text-fade">
+                                Hello! I'm <span class="text-[#FFD700] font-semibold">Ashmit</span>, a digital craftsman who thrives at the intersection of creativity and technology.
+                            </p>
+                            <p class="text-lg text-gray-400 leading-relaxed">
+                                With a passion for building exceptional digital experiences, I blend the precision of code with the artistry of design. My journey in tech has been driven by an insatiable curiosity and a desire to push the boundaries of what's possible in the digital realm.
+                            </p>
+                        </div>
+
+                        <!-- Skills Section -->
+                        <div class="mb-12">
+                            <h3 class="text-[#FFD700] text-xl font-semibold mb-6 flex items-center">
+                                <i class="fas fa-code mr-3"></i>
+                                Technical Arsenal
+                            </h3>
+                            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                                <div class="skill-card group">
+                                    <div class="p-4 rounded-lg bg-black/50 border border-[#FFD700]/10 hover:border-[#FFD700]/50 transition-all duration-300">
+                                        <i class="fab fa-js text-[#FFD700] text-2xl mb-2"></i>
+                                        <h4 class="font-medium mb-2">JavaScript</h4>
+                                        <p class="text-sm text-gray-400">ES6+ • React • Node.js</p>
+                                    </div>
+                                </div>
+                                <div class="skill-card group">
+                                    <div class="p-4 rounded-lg bg-black/50 border border-[#FFD700]/10 hover:border-[#FFD700]/50 transition-all duration-300">
+                                        <i class="fas fa-paint-brush text-[#FFD700] text-2xl mb-2"></i>
+                                        <h4 class="font-medium mb-2">Design</h4>
+                                        <p class="text-sm text-gray-400">Figma • UI/UX • Prototyping</p>
+                                    </div>
+                                </div>
+                                <div class="skill-card group">
+                                    <div class="p-4 rounded-lg bg-black/50 border border-[#FFD700]/10 hover:border-[#FFD700]/50 transition-all duration-300">
+                                        <i class="fas fa-gamepad text-[#FFD700] text-2xl mb-2"></i>
+                                        <h4 class="font-medium mb-2">Game Dev</h4>
+                                        <p class="text-sm text-gray-400">Unity • C# • 3D Design</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Current Focus -->
+                        <div class="space-y-4">
+                            <h3 class="text-[#FFD700] text-xl font-semibold mb-6 flex items-center">
+                                <i class="fas fa-rocket mr-3"></i>
+                                Current Focus
+                            </h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="focus-item flex items-start space-x-3 p-4 rounded-lg bg-black/30 hover:bg-black/50 transition-all duration-300">
+                                    <i class="fas fa-brain text-[#FFD700] mt-1"></i>
+                                    <div>
+                                        <h4 class="font-medium mb-1">AI Integration</h4>
+                                        <p class="text-sm text-gray-400">Exploring machine learning applications in web development</p>
+                                    </div>
+                                </div>
+                                <div class="focus-item flex items-start space-x-3 p-4 rounded-lg bg-black/30 hover:bg-black/50 transition-all duration-300">
+                                    <i class="fas fa-vr-cardboard text-[#FFD700] mt-1"></i>
+                                    <div>
+                                        <h4 class="font-medium mb-1">3D Web Experiences</h4>
+                                        <p class="text-sm text-gray-400">Creating immersive 3D interfaces with Three.js</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="work" class="py-20 px-4 relative parallax-section" data-speed="0.2">
+        <div class="container mx-auto" data-aos="fade-up">
+            <h2 class="text-3xl font-['Playfair_Display'] font-bold mb-16 flex items-center justify-center">
+                <span class="text-[#FFD700] mr-2">02.</span>
+                <span class="relative">
+                    Professional Journey
+                    <span class="absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-[#FFD700] to-transparent"></span>
+                </span>
+            </h2>
+
+            <div class="flex justify-center">
+                <div class="max-w-4xl w-full">
+                    <div class="work-card p-10 bg-gradient-to-br from-black via-[#1a1a1a] to-black border border-[#FFD700]/20 rounded-xl shadow-2xl backdrop-blur-sm hover:border-[#FFD700]/40 transition-all duration-500">
+                        <!-- Header with improved spacing -->
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
+                            <div class="space-y-2">
+                                <h3 class="text-2xl font-semibold text-[#FFD700]">Web Development Intern</h3>
+                                <a href="https://asmeefoundation.org/" target="_blank" class="text-lg hover:text-[#FFD700] transition-colors">
+                                    @ Asmee Foundation
+                                </a>
+                            </div>
+                            <p class="text-gray-400 mt-2 md:mt-0 font-light">June 2023 - August 2023</p>
+                        </div>
+
+                        <!-- Content with improved spacing -->
+                        <div class="space-y-6 text-gray-300">
+                            <div class="flex items-start gap-4">
+                                <i class="fas fa-code-branch text-[#FFD700] mt-1.5 text-lg"></i>
+                                <p class="leading-relaxed">
+                                    Architected and implemented responsive web solutions using modern frameworks, resulting in a 40% improvement in user engagement metrics.
+                                </p>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <i class="fas fa-laptop-code text-[#FFD700] mt-1.5 text-lg"></i>
+                                <p class="leading-relaxed">
+                                    Developed an innovative donation tracking system that streamlined the foundation's fundraising efforts, processing over ₹50,000 in the first month.
+                                </p>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <i class="fas fa-mobile-alt text-[#FFD700] mt-1.5 text-lg"></i>
+                                <p class="leading-relaxed">
+                                    Created a progressive web app that enhanced mobile accessibility, increasing mobile user retention by 60%.
+                                </p>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <i class="fas fa-users-cog text-[#FFD700] mt-1.5 text-lg"></i>
+                                <p class="leading-relaxed">
+                                    Collaborated with a cross-functional team to implement user-centric features that amplified the foundation's digital presence and social impact.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Technology tags with improved spacing -->
+                        <div class="mt-10 flex flex-wrap gap-4">
+                            <span class="px-4 py-1.5 bg-black/30 border border-[#FFD700]/20 rounded-full text-sm text-[#FFD700] hover:border-[#FFD700]/40">React.js</span>
+                            <span class="px-4 py-1.5 bg-black/30 border border-[#FFD700]/20 rounded-full text-sm text-[#FFD700] hover:border-[#FFD700]/40">Node.js</span>
+                            <span class="px-4 py-1.5 bg-black/30 border border-[#FFD700]/20 rounded-full text-sm text-[#FFD700] hover:border-[#FFD700]/40">MongoDB</span>
+                            <span class="px-4 py-1.5 bg-black/30 border border-[#FFD700]/20 rounded-full text-sm text-[#FFD700] hover:border-[#FFD700]/40">Tailwind CSS</span>
+                            <span class="px-4 py-1.5 bg-black/30 border border-[#FFD700]/20 rounded-full text-sm text-[#FFD700] hover:border-[#FFD700]/40">PWA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4 parallax-section" data-speed="0.25">
+        <div class="container mx-auto" data-aos="fade-up">
+            <h2 class="text-3xl font-['Playfair_Display'] font-bold mb-16 flex items-center justify-center">
+                <span class="text-[#FFD700] mr-2">03.</span>
+                <span class="relative">
+                    Featured Projects
+                    <span class="absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-[#FFD700] to-transparent"></span>
+                </span>
+            </h2>
+
+            <div class="flex flex-col gap-20 items-center">
+                <!-- Hostel Management System -->
+                <div class="project-card max-w-4xl w-full">
+                    <div class="p-10 bg-gradient-to-br from-black via-[#1a1a1a] to-black border border-[#FFD700]/20 rounded-xl shadow-2xl backdrop-blur-sm hover:border-[#FFD700]/40 transition-all duration-500">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
+                            <div class="space-y-2">
+                                <h3 class="text-2xl font-semibold text-[#FFD700]">Hostel Management System</h3>
+                                <p class="text-lg text-gray-400">Full-Stack Web Application</p>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="https://github.com/ashmitrana24" target="_blank" class="text-[#FFD700] hover:text-[#FFD700]/80 transition-all z-10 relative">
+                                    <i class="fab fa-github text-xl"></i>
+                                </a>
+                                <a href="#" target="_blank" class="text-[#FFD700] hover:text-[#FFD700]/80 transition-all z-10 relative">
+                                    <i class="fas fa-external-link-alt text-xl"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="space-y-6 text-gray-300">
+                            <div class="flex items-start gap-4">
+                                <i class="fas fa-server text-[#FFD700] mt-1.5 text-lg"></i>
+                                <p class="leading-relaxed">
+                                    Engineered a robust microservices architecture using Node.js, Express, and PHP, implementing JWT authentication and role-based access control for secure user management.
+                                </p>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <i class="fas fa-database text-[#FFD700] mt-1.5 text-lg"></i>
+                                <p class="leading-relaxed">
+                                    Designed and optimized MySQL and MongoDB databases with complex SQL queries and aggregation pipelines, achieving 60% faster query response times and implementing real-time room allocation tracking.
+                                </p>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <i class="fas fa-layer-group text-[#FFD700] mt-1.5 text-lg"></i>
+                                <p class="leading-relaxed">
+                                    Built an intuitive admin dashboard using React.js and Redux Toolkit, integrating PHP APIs and SQL stored procedures for efficient data management and real-time updates via WebSocket integration.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="mt-10 flex flex-wrap gap-4">
+                            <span class="px-4 py-1.5 bg-black/30 border border-[#FFD700]/20 rounded-full text-sm text-[#FFD700] hover:border-[#FFD700]/40">React.js</span>
+                            <span class="px-4 py-1.5 bg-black/30 border border-[#FFD700]/20 rounded-full text-sm text-[#FFD700] hover:border-[#FFD700]/40">Node.js</span>
+                            <span class="px-4 py-1.5 bg-black/30 border border-[#FFD700]/20 rounded-full text-sm text-[#FFD700] hover:border-[#FFD700]/40">PHP</span>
+                            <span class="px-4 py-1.5 bg-black/30 border border-[#FFD700]/20 rounded-full text-sm text-[#FFD700] hover:border-[#FFD700]/40">MySQL</span>
+                            <span class="px-4 py-1.5 bg-black/30 border border-[#FFD700]/20 rounded-full text-sm text-[#FFD700] hover:border-[#FFD700]/40">MongoDB</span>
+                            <span class="px-4 py-1.5 bg-black/30 border border-[#FFD700]/20 rounded-full text-sm text-[#FFD700] hover:border-[#FFD700]/40">Redux Toolkit</span>
+                            <span class="px-4 py-1.5 bg-black/30 border border-[#FFD700]/20 rounded-full text-sm text-[#FFD700] hover:border-[#FFD700]/40">WebSocket</span>
+                            <span class="px-4 py-1.5 bg-black/30 border border-[#FFD700]/20 rounded-full text-sm text-[#FFD700] hover:border-[#FFD700]/40">JWT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Parallax Traveling Website -->
+                <div class="project-card max-w-4xl w-full">
+                    <div class="p-10 bg-gradient-to-br from-black via-[#1a1a1a] to-black border border-[#FFD700]/20 rounded-xl shadow-2xl backdrop-blur-sm hover:border-[#FFD700]/40 transition-all duration-500">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
+                            <div class="space-y-2">
+                                <h3 class="text-2xl font-semibold text-[#FFD700]">Immersive Travel Experience</h3>
+                                <p class="text-lg text-gray-400">Interactive Parallax Website</p>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="https://github.com/ashmitrana24" target="_blank" class="text-[#FFD700] hover:text-[#FFD700]/80 transition-all z-10 relative">
+                                    <i class="fab fa-github text-xl"></i>
+                                </a>
+                                <a href="#" target="_blank" class="text-[#FFD700] hover:text-[#FFD700]/80 transition-all z-10 relative">
+                                    <i class="fas fa-external-link-alt text-xl"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="space-y-6 text-gray-300">
+                            <div class="flex items-start gap-4">
+                                <i class="fas fa-cube text-[#FFD700] mt-1.5 text-lg"></i>
+                                <p class="leading-relaxed">
+                                    Developed an immersive 3D parallax scrolling experience using Three.js and GSAP, achieving smooth animations with 60+ FPS performance across devices.
+                                </p>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <i class="fas fa-paint-brush text-[#FFD700] mt-1.5 text-lg"></i>
+                                <p class="leading-relaxed">
+                                    Implemented advanced shader materials and post-processing effects using WebGL, creating dynamic atmospheric conditions and realistic environment rendering.
+                                </p>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <i class="fas fa-mobile-alt text-[#FFD700] mt-1.5 text-lg"></i>
+                                <p class="leading-relaxed">
+                                    Engineered a responsive design system using CSS Grid and Flexbox, with touch-optimized interactions and progressive image loading for optimal mobile performance.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="mt-10 flex flex-wrap gap-4">
+                            <span class="px-4 py-1.5 bg-black/30 border border-[#FFD700]/20 rounded-full text-sm text-[#FFD700] hover:border-[#FFD700]/40">Three.js</span>
+                            <span class="px-4 py-1.5 bg-black/30 border border-[#FFD700]/20 rounded-full text-sm text-[#FFD700] hover:border-[#FFD700]/40">WebGL</span>
+                            <span class="px-4 py-1.5 bg-black/30 border border-[#FFD700]/20 rounded-full text-sm text-[#FFD700] hover:border-[#FFD700]/40">GSAP</span>
+                            <span class="px-4 py-1.5 bg-black/30 border border-[#FFD700]/20 rounded-full text-sm text-[#FFD700] hover:border-[#FFD700]/40">JavaScript</span>
+                            <span class="px-4 py-1.5 bg-black/30 border border-[#FFD700]/20 rounded-full text-sm text-[#FFD700] hover:border-[#FFD700]/40">Responsive Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 relative parallax-section" data-speed="0.3">
+        <div class="container mx-auto" data-aos="fade-up">
+            <h2 class="text-3xl font-['Playfair_Display'] font-bold mb-16 flex items-center justify-center">
+                <span class="text-[#FFD700] mr-2">04.</span>
+                <span class="relative">
+                    What's Next?
+                    <span class="absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-[#FFD700] to-transparent"></span>
+                </span>
+            </h2>
+
+            <div class="flex justify-center">
+                <div class="max-w-4xl w-full perspective-card">
+                    <div class="contact-card p-12 bg-gradient-to-br from-black via-[#1a1a1a] to-black border border-[#FFD700]/20 rounded-xl shadow-2xl backdrop-blur-sm hover:border-[#FFD700]/40 transition-all duration-500">
+                        <div class="text-center space-y-6 mb-16">
+                            <h3 class="text-4xl font-['Playfair_Display'] font-bold golden-text animate-gradient">
+                                Let's Create Digital Magic Together
+                            </h3>
+                            <p class="text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto animated-text-fade">
+                                Ready to transform your ideas into exceptional digital experiences?
+                            </p>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-8 mb-16">
+                            <div class="feature-card group p-6 bg-black/30 rounded-lg border border-[#FFD700]/10 hover:border-[#FFD700]/30 transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1">
+                                <div class="flex items-start gap-4">
+                                    <i class="fas fa-lightbulb text-[#FFD700] text-2xl mt-1 group-hover:animate-glow"></i>
+                                    <div>
+                                        <h4 class="text-[#FFD700] font-semibold mb-2 group-hover:text-[#FFD700]">Innovative Solutions</h4>
+                                        <p class="text-gray-400 group-hover:text-gray-300 transition-colors">
+                                            From concept to deployment, bringing your vision to life with cutting-edge technology.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="feature-card group p-6 bg-black/30 rounded-lg border border-[#FFD700]/10 hover:border-[#FFD700]/30 transition-all duration-500 transform hover:-translate-y-2 hover:rotate-1">
+                                <div class="flex items-start gap-4">
+                                    <i class="fas fa-rocket text-[#FFD700] text-2xl mt-1 group-hover:animate-glow"></i>
+                                    <div>
+                                        <h4 class="text-[#FFD700] font-semibold mb-2 group-hover:text-[#FFD700]">Rapid Development</h4>
+                                        <p class="text-gray-400 group-hover:text-gray-300 transition-colors">
+                                            Fast-paced, efficient development without compromising on quality or performance.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center space-y-8">
+                            <p class="text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto">
+                                Available for exciting projects and collaborations. Let's discuss how we can create something extraordinary together.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Animated Background Elements -->
+        <div class="absolute top-20 left-10 w-32 h-32 bg-[#FFD700]/5 rounded-full blur-2xl animate-pulse-slow"></div>
+        <div class="absolute bottom-20 right-10 w-40 h-40 bg-[#FFD700]/5 rounded-full blur-2xl animate-pulse-slow animation-delay-500"></div>
+        <div class="absolute top-1/2 left-1/4 w-24 h-24 bg-[#FFD700]/5 rounded-full blur-2xl animate-pulse-slow animation-delay-700"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-gray-400 border-t border-[#FFD700]/5">
+        <p class="text-sm">
+            Designed & Built with <i class="fas fa-heart text-[#FFD700] animate-pulse"></i> by Ashmit Rana
+        </p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
